@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Atlanta's Transit Is Not Working for Everyone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="poster.css" />
+</head>
+<body>
+  <article class="poster">
+    <div class="stripe">
+      <span style="background:#c43428"></span>
+      <span style="background:#e8a838"></span>
+      <span style="background:#287c4c"></span>
+    </div>
+
+    <header class="head">
+      <p class="eyebrow">Atlanta Community Issue</p>
+      <h1>Atlanta's Transit Is <em>Not</em> Working for&nbsp;Everyone.</h1>
+      <p class="lede">A proposal for equitable access to MARTA, built on research from Georgia Tech, Georgia State, and the Kinder Institute.</p>
+    </header>
+
+    <section class="stats">
+      <div class="stat">
+        <div class="stat-num">10<span class="stat-unit">%</span></div>
+        <div class="stat-label">of Atlanta commuters<br/>use MARTA</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">5.4<span class="stat-unit">&times;</span></div>
+        <div class="stat-label">income gap between<br/>Buckhead &amp; West End stations</div>
+      </div>
+    </section>
+
+    <figure class="chart-block">
+      <figcaption>
+        <p class="eyebrow eyebrow-dark">The Problem</p>
+        <h2>Built Unequal by Design.</h2>
+      </figcaption>
+      <div class="chart">
+        <div class="bar-row" style="--pct:87">
+          <span class="bar-label">Buckhead</span>
+          <div class="bar bar-green"><span class="bar-amount">$104K</span></div>
+        </div>
+        <div class="bar-row" style="--pct:68">
+          <span class="bar-label">Midtown</span>
+          <div class="bar bar-green"><span class="bar-amount">$82K</span></div>
+        </div>
+        <div class="bar-row" style="--pct:42">
+          <span class="bar-label">Five Points</span>
+          <div class="bar bar-gold"><span class="bar-amount">$51K</span></div>
+        </div>
+        <div class="bar-row" style="--pct:20">
+          <span class="bar-label">Oakland City</span>
+          <div class="bar bar-red"><span class="bar-amount">$24K</span></div>
+        </div>
+        <div class="bar-row" style="--pct:16">
+          <span class="bar-label">West End</span>
+          <div class="bar bar-red"><span class="bar-amount">$19K</span></div>
+        </div>
+        <div class="bar-median" style="--pct:39"><span>Atlanta median $47,527</span></div>
+      </div>
+      <p class="chart-source">Median household income by MARTA station area. Sources: Atlanta Regional Commission; U.S. Census Bureau ACS.</p>
+    </figure>
+
+    <section class="recs">
+      <p class="eyebrow eyebrow-dark">Two Paths Forward</p>
+      <div class="rec-grid">
+        <article class="rec rec-red">
+          <p class="rec-num">01</p>
+          <h3>Support Propel ATL.</h3>
+          <p>Expand their advocacy work into the neighborhoods with the worst transit access.</p>
+        </article>
+        <article class="rec rec-green">
+          <p class="rec-num">02</p>
+          <h3>Scale MARTA Reach.</h3>
+          <p>On-demand vans that solve the first and last mile problem. Now live in 12 zones.</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="spacer"></div>
+
+    <footer class="foot">
+      <div class="foot-left">
+        <p class="eyebrow eyebrow-gold">Full Story</p>
+        <h2 class="foot-title">Scan to see the&nbsp;full case.</h2>
+        <p class="foot-sub">History, 2026 updates, sources, and five ways to help this week.</p>
+        <p class="foot-links">
+          <a>letspropelatl.org</a>
+          <span aria-hidden="true">&middot;</span>
+          <a>itsmarta.com/reach</a>
+        </p>
+        <p class="foot-phone">404-848-6622</p>
+      </div>
+      <div class="foot-right">
+        <div class="qr">
+          <!-- QR injected at build time -->
+          {{QR_SVG}}
+        </div>
+        <p class="qr-caption">lmc3403-webpage<br/>.vercel.app</p>
+        <p class="gt-badge"><span class="gt-mark">GT</span> Georgia Institute of Technology</p>
+      </div>
+    </footer>
+  </article>
+</body>
+</html>
