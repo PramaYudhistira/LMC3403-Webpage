@@ -67,3 +67,24 @@ const statObs = new IntersectionObserver((entries) => {
 }, { threshold: 0.6 });
 
 document.querySelectorAll(".stat-num").forEach((el) => statObs.observe(el));
+
+// scroll progress bar (top tricolor)
+const progressBar = document.querySelector(".scroll-progress");
+if (progressBar) {
+  let ticking = false;
+  const updateProgress = () => {
+    ticking = false;
+    const docEl = document.documentElement;
+    const max = docEl.scrollHeight - docEl.clientHeight;
+    const p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+    progressBar.style.transform = `scaleX(${p})`;
+  };
+  window.addEventListener("scroll", () => {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(updateProgress);
+    }
+  }, { passive: true });
+  window.addEventListener("resize", updateProgress, { passive: true });
+  updateProgress();
+}
