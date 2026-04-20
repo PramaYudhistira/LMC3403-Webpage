@@ -716,7 +716,12 @@ html.js .reveal.in-view .sources > *:nth-child(n+6) { transition-delay: 560ms; }
   }
 }
 @media (max-width: 720px) {
-  .hero { padding: 72px 0 56px; }
+  .hero { padding: 72px 0 56px; min-height: 70vh; }
+  .hero-orbs .orb { width: 22rem; height: 22rem; filter: blur(55px); }
+  .hero-orbs .orb-red { top: -8rem; left: -8rem; }
+  .hero-orbs .orb-gold { bottom: -10rem; right: -6rem; }
+  .hero-orbs .orb-green { width: 18rem; height: 18rem; right: -8rem; top: 40%; }
+  .hero-rails { opacity: 0.85; }
   .stats-inner {
     grid-template-columns: 1fr;
     gap: 8px;
@@ -739,7 +744,8 @@ html.js .reveal.in-view .sources > *:nth-child(n+6) { transition-delay: 560ms; }
 
 @media (max-width: 480px) {
   body { font-size: 16px; }
-  .hero { padding: 56px 0 44px; }
+  .hero { padding: 56px 0 44px; min-height: 78vh; }
+  .hero-orbs .orb { width: 18rem; height: 18rem; filter: blur(40px); }
   .section h2 { font-size: 26px; }
 }
 
