@@ -136,6 +136,32 @@ a:hover { text-decoration: underline; }
   z-index: 1;
   pointer-events: none;
 }
+
+/* animated light pulses traveling along each rail curve (reads like a train) */
+.hero-rails .rail-pulse {
+  stroke-dasharray: 42 1000;
+  stroke-dashoffset: 42;
+  will-change: stroke-dashoffset;
+}
+.hero-rails .pulse-1 {
+  filter: drop-shadow(0 0 6px rgba(232, 168, 56, 0.85));
+  animation: rail-travel 1.8s cubic-bezier(.45,.05,.55,.95) infinite;
+}
+.hero-rails .pulse-2 {
+  filter: drop-shadow(0 0 6px rgba(196, 52, 40, 0.85));
+  animation: rail-travel 2.4s cubic-bezier(.45,.05,.55,.95) infinite 0.6s;
+}
+.hero-rails .pulse-3 {
+  filter: drop-shadow(0 0 5px rgba(40, 124, 76, 0.9));
+  animation: rail-travel 2.1s cubic-bezier(.45,.05,.55,.95) infinite 0.3s;
+}
+@keyframes rail-travel {
+  0%   { stroke-dashoffset: 42; opacity: 0; }
+  4%   { opacity: 1; }
+  96%  { opacity: 1; }
+  100% { stroke-dashoffset: -1000; opacity: 0; }
+}
+
 .hero h1 {
   font-family: var(--serif);
   font-weight: 800;
@@ -725,6 +751,7 @@ html.js .reveal.in-view .sources > *:nth-child(n+6) { transition-delay: 560ms; }
   html.js .reveal .timeline > *,
   html.js .reveal .sources > * { opacity: 1; transform: none; transition: none; }
   .hero-orbs .orb,
-  .hero-link .arrow { animation: none; }
+  .hero-link .arrow,
+  .hero-rails .rail-pulse { animation: none; }
   .scroll-progress { transition: none; }
 }
